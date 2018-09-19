@@ -9,6 +9,14 @@
       "description": "Init schematics collection for cliberry-doc.",
       "factory": "./init/index#init",
       "schema": "./init/schema.json"
+    },
+    "license": {
+      "factory": "./license/index#license",
+      "schema": "./license/schema.json",
+      "description": "Generate license of the project",
+      "aliases": [
+        "l"
+      ]
     }
   }
 }
