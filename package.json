@@ -1,0 +1,47 @@
+{
+  "name": "cliberry-doc",
+  "version": "0.0.1",
+  "description": "Collection of cliberry/schematics/angular cli for documentation generation.",
+  "main": "./src/index",
+  "schematics": "./src/collection.json",
+  "scripts": {
+    "schematics": "schematics",
+    "cliberry": "cliberry",
+    "build": "yarn --dev && tsc -p tsconfig.json",
+    "test": "yarn build && jasmine src/**/*.spec.js"
+  },
+  "homepage": "https://cliberry-doc",
+  "repository": {
+    "type": "git",
+    "url": "https://cliberry-doc"
+  },
+  "engines": {
+    "node": ">=8.9"
+  },
+  "author": {
+    "name": "Tomasz Gorka",
+    "email": "tomasz@gorka.org.pl"
+  },
+  "keywords": [
+    "schematics",
+    "cliberry",
+    "template"
+  ],
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "@angular-devkit/core": "^0.8.1",
+    "@angular-devkit/schematics": "^0.8.1",
+    "@schematics/angular": "^0.8.1",
+    "source-map-support": "^0.5.9"
+  },
+  "devDependencies": {
+    "@angular-devkit/schematics-cli": "^0.8.1",
+    "@types/jasmine": "^2.8.8",
+    "@types/node": "^10.9.4",
+    "@types/source-map-support": "^0.4.1",
+    "cliberry": "^0.1.12",
+    "jasmine": "^3.2.0",
+    "typescript": "^3.0.3"
+  }
+}
