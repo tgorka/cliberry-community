@@ -11,9 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 
-## [0.0.1] - 2018-09-11
+## [0.0.2] - 2018-09-20
+### Added
+- add community files generator
+- community files in the init
+
+
+## [0.0.1] - 2018-09-19
 ### Added
 - add generator for the licenses with 9 licenses
+- init working with license
 - generate project with:
   * schematics
   * debug framework

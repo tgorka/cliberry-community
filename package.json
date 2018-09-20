@@ -1,6 +1,6 @@
 {
   "name": "cliberry-doc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Collection of cliberry/schematics/angular cli for documentation generation.",
   "main": "./src/index",
   "schematics": "./src/collection.json",
