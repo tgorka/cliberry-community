@@ -43,8 +43,9 @@ const removeExistingLicense = (tree: Tree): void => {
 // per file.
 export function license(options: Options): Rule {
   options.type = (options.type || getType()).toLocaleLowerCase();
-  options.year = options.year || new Date().getFullYear().toString();
+  options.year = options.year || Number.parseInt(new Date().getFullYear().toString());
   options.author = options.author || getAuthor();
+  console.log(`Creating LICENSE for ${JSON.stringify(options)}`);
 
   return (tree: Tree, _context: SchematicContext): Rule | Tree => {
     removeExistingLicense(tree);
@@ -54,7 +55,7 @@ export function license(options: Options): Rule {
     if (!fs.existsSync(path.join(__dirname, `./files/${options.type}/LICENSE.md`))) {
       throw new SchematicsException(`Unknown license: ${options.type}`);
     }
-    return mergeWith(apply(url(`./files/${options.type}`), [
+    return mergeWith(apply(url('file://'+path.join(__dirname, `./files/${options.type}`)), [
       template({
         utils: strings,
         ...stringUtils,

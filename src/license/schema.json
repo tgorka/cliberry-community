@@ -6,19 +6,16 @@
   "properties": {
     "type": {
       "type": "string",
-      "$default": "mit",
       "alias": "t",
       "description": "Type of the license (private.mit,gpl,lgpl,cc-by,cc-by-sa,cc-by-nd,cc-by-nc-sa,cc-by-nc-nd). By default it's taken from cliberry.json or mit"
     },
     "year": {
-      "type": "string",
-      "$default": "",
+      "type": "integer",
       "alias": "y",
       "description": "Year to set in the license. Current year by default"
     },
     "author": {
       "type": "string",
-      "$default": "",
       "alias": "a",
       "description": "Author in the license. By default taken from the cliberry.json or empty"
     }

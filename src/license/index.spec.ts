@@ -18,7 +18,7 @@ describe(schematicName, () => {
   const schematicRunner = new SchematicTestRunner('schematics', collectionPath);
   const defaultOptions: Options = {
     author: 'John-test Doe-test, Marc-test Dupond-test, Magic Company LTD',
-    year: '2018',
+    year: 2018,
   };
 
   it('should throw unknown license', () => {

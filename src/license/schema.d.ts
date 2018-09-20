@@ -14,7 +14,7 @@ export interface Schema {
   /**
    * Year to set in the license. Current year by default
    */
-  year?: string;
+  year?: number;
   /**
    * Author in the license. By default taken from the cliberry.json or empty
    */
