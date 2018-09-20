@@ -17,6 +17,13 @@
       "aliases": [
         "l"
       ]
+    },
+    "community": {
+      "factory": "./community/index#community",
+      "schema": "./community/schema.json",
+      "aliases": [
+        "c"
+      ]
     }
   }
 }
