@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.1] - 2018-09-11
 ### Added
+- add generator for the licenses with 9 licenses
 - generate project with:
   * schematics
   * debug framework

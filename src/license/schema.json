@@ -8,7 +8,7 @@
       "type": "string",
       "$default": "mit",
       "alias": "t",
-      "description": "Type of the license (mit,private). By default it's taken from cliberry.json or mit"
+      "description": "Type of the license (private.mit,gpl,lgpl,cc-by,cc-by-sa,cc-by-nd,cc-by-nc-sa,cc-by-nc-nd). By default it's taken from cliberry.json or mit"
     },
     "year": {
       "type": "string",

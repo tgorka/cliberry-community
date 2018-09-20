@@ -39,6 +39,11 @@ describe(schematicName, () => {
     const tree = schematicRunner.runSchematic(schematicName, options);
     const files = tree.files;
     expect(files.indexOf('/LICENSE.md')).toBeGreaterThanOrEqual(0);
+    const licenseFile = tree.get('/LICENSE.md');
+    expect(licenseFile).not.toBeNull();
+    if (licenseFile !== null) {
+      expect(licenseFile.content.toString()).toBe(LICENSE_TEST);
+    }
   });
 
   it('should create private license', () => {
@@ -51,3 +56,26 @@ describe(schematicName, () => {
   });
 
 });
+
+const LICENSE_TEST = `MIT License
+
+Copyright (c) 2018 John-test Doe-test, Marc-test Dupond-test, Magic Company LTD
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+`;
