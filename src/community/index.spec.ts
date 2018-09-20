@@ -18,13 +18,7 @@ const schematicName = 'community';
 describe(schematicName, () => {
   const schematicRunner = new SchematicTestRunner('schematics', collectionPath);
   const defaultOptions: Options = {
-    code-of-conduct: 'test',
-    email: 'test',
-    contributing: 'test',
-    pull-request: 'test',
-    bug-report: 'test',
-    feature-request: 'test',
-    custom: 'test',
+    email: 'test@test.com',
   };
 
   it('should create all files of a project', () => {
@@ -32,7 +26,9 @@ describe(schematicName, () => {
 
     const tree = schematicRunner.runSchematic(schematicName, options);
     const files = tree.files;
-    expect(files.indexOf('/src/community/.gitkeep')).toBeGreaterThanOrEqual(0);
+    expect(files.indexOf('/CODE_OF_CONDUCT.md')).toBeGreaterThanOrEqual(0);
+    expect(files.indexOf('/CONTRIBUTING.md')).toBeGreaterThanOrEqual(0);
+    expect(files.indexOf('/PULL_REQUEST_TEMPLATE.md')).toBeGreaterThanOrEqual(0);
   });
 
 });

@@ -6,43 +6,45 @@
  * found in the LICENSE file at https://github.com/tgorka/cliberry-schematics/LICENSE
  */
 export interface Schema {
-  
+
   /**
    * Do generate code of conduct. By default true.
    */
-  code-of-conduct: string;
-  
+  codeOfConduct?: boolean;
+
   /**
-   * Con
-tact email for code of conduct. Empty by default.
+   * Contact email for code of conduct. Empty by default.
    */
   email: string;
-  
+
+  /**
+   * Repository url to be included in code of conduct and pull request template. Empty by default.
+   */
+  repositoryUrl?: string;
+
   /**
    * Do generate contributing. By default true.
    */
-  contributing: string;
-  
+  contributing?: boolean;
+
   /**
-   * Do generate pull request template. By default tru
-e
+   * Do generate pull request template. By default true
    */
-  pull-request: string;
-  
+  pullRequest?: boolean;
+
   /**
    * Do generate bug report template. By default true.
    */
-  bug-report: string;
-  
+  bugReport?: boolean;
+
   /**
    * Do generate feature request. By default true
    */
-  feature-request: string;
-  
+  featureRequest?: boolean;
+
   /**
-   * Do generate custm t
-emplate. By default true
+   * Do generate custm template. By default true
    */
-  custom: string;
-  
+  custom?: boolean;
+
 }

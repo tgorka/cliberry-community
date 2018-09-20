@@ -21,6 +21,7 @@
     "community": {
       "factory": "./community/index#community",
       "schema": "./community/schema.json",
+      "description": "Generate community files of the project",
       "aliases": [
         "c"
       ]

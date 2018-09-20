@@ -26,6 +26,14 @@ const stringUtils = {dasherize, classify, camelize};
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
 export function community(options: Options): Rule {
+  options.bugReport = (options.bugReport !== false) ? true : false;
+  options.codeOfConduct = (options.codeOfConduct !== false) ? true : false;
+  options.contributing = (options.contributing !== false) ? true : false;
+  options.custom = (options.custom !== false) ? true : false;
+  options.featureRequest = (options.featureRequest !== false) ? true : false;
+  options.pullRequest = (options.pullRequest !== false) ? true : false;
+  options.repositoryUrl = options.repositoryUrl || "";
+  options.email = options.email || "";
   /*return (tree: Tree, _context: SchematicContext): Rule => {
     return tree;
     // return chain[example({name: options.name})]

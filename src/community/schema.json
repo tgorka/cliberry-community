@@ -4,77 +4,58 @@
   "title": "cliberry-schematics community Options Schema",
   "type": "object",
   "properties": {
-    "code-of-conduct": {
+    "email": {
       "type": "string",
       "$default": {
         "$source": "argv",
         "index": "0"
       },
-      "alias": "coc",
-      "description": "Do generate code of conduct. By default true."
-    },
-    "email": {
-      "type": "string",
-      "$default": {
-        "$source": "argv",
-        "index": "1"
-      },
       "alias": "e",
-      "description": "Con\ntact email for code of conduct. Empty by default."
+      "description": "Contact email for code of conduct. Empty by default."
+    },
+    "repositoryUrl": {
+      "type": "string",
+      "alias": "e",
+      "description": "Contact email for code of conduct. Empty by default."
     },
     "contributing": {
-      "type": "string",
-      "$default": {
-        "$source": "argv",
-        "index": "2"
-      },
+      "type": "boolean",
+      "$default": true,
       "alias": "c",
       "description": "Do generate contributing. By default true."
     },
-    "pull-request": {
-      "type": "string",
-      "$default": {
-        "$source": "argv",
-        "index": "3"
-      },
-      "alias": "pr",
-      "description": "Do generate pull request template. By default tru\ne"
+    "codeOfConduct": {
+      "type": "boolean",
+      "$default": true,
+      "alias": "coc",
+      "description": "Do generate code of conduct. By default true."
     },
-    "bug-report": {
-      "type": "string",
-      "$default": {
-        "$source": "argv",
-        "index": "4"
-      },
+    "pullRequest": {
+      "type": "boolean",
+      "$default": true,
+      "alias": "pr",
+      "description": "Do generate pull request template. By default true"
+    },
+    "bugReport": {
+      "type": "boolean",
+      "$default": true,
       "alias": "br",
       "description": "Do generate bug report template. By default true."
     },
-    "feature-request": {
-      "type": "string",
-      "$default": {
-        "$source": "argv",
-        "index": "5"
-      },
+    "featureRequest": {
+      "type": "boolean",
+      "$default": true,
       "alias": "fr",
       "description": "Do generate feature request. By default true"
     },
     "custom": {
-      "type": "string",
-      "$default": {
-        "$source": "argv",
-        "index": "6"
-      },
+      "type": "boolean",
+      "$default": true,
       "alias": "cm",
-      "description": "Do generate custm t\nemplate. By default true"
+      "description": "Do generate custm template. By default true"
     }
   },
   "required": [
-    "code-of-conduct",
-    "email",
-    "contributing",
-    "pull-request",
-    "bug-report",
-    "feature-request",
-    "custom"
+    "email"
   ]
 }
