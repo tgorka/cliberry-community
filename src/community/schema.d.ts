@@ -15,7 +15,7 @@ export interface Schema {
   /**
    * Contact email for code of conduct. Empty by default.
    */
-  email: string;
+  email?: string;
 
   /**
    * Repository url to be included in code of conduct and pull request template. Empty by default.

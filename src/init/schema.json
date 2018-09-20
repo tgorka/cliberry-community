@@ -37,6 +37,16 @@
       "type": "string",
       "alias": "a",
       "description": "Author in the license. By default taken from the cliberry.json or empty"
+    },
+    "email": {
+      "type": "string",
+      "alias": "e",
+      "description": "Contact email for code of conduct. Empty by default."
+    },
+    "repositoryUrl": {
+      "type": "string",
+      "alias": "r",
+      "description": "Contact email for code of conduct. Empty by default."
     }
   },
   "required": [

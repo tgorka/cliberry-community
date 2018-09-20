@@ -19,4 +19,13 @@ export interface Schema {
    * Author in the license. By default taken from the cliberry.json or empty
    */
   author?: string;
+  /**
+   * Contact email for code of conduct. Empty by default.
+   */
+  email?: string;
+
+  /**
+   * Repository url to be included in code of conduct and pull request template. Empty by default.
+   */
+  repositoryUrl?: string;
 }

@@ -15,41 +15,40 @@
     },
     "repositoryUrl": {
       "type": "string",
-      "alias": "e",
+      "alias": "r",
       "description": "Contact email for code of conduct. Empty by default."
     },
     "contributing": {
       "type": "boolean",
       "alias": "c",
-      "description": "Do generate contributing. By default true."
+      "description": "Do not generate contributing. By default false."
     },
     "codeOfConduct": {
       "type": "boolean",
       "alias": "coc",
-      "description": "Do generate code of conduct. By default true."
+      "description": "Do not generate code of conduct. By default false."
     },
     "pullRequest": {
       "type": "boolean",
       "alias": "pr",
-      "description": "Do generate pull request template. By default true"
+      "description": "Do not generate pull request template. By default false"
     },
     "bugReport": {
       "type": "boolean",
       "alias": "br",
-      "description": "Do generate bug report template. By default true."
+      "description": "Do not generate bug report template. By default false."
     },
     "featureRequest": {
       "type": "boolean",
       "alias": "fr",
-      "description": "Do generate feature request. By default true"
+      "description": "Do not generate feature request. By default false"
     },
-    "custom": {
+    "Custom": {
       "type": "boolean",
       "alias": "cm",
-      "description": "Do generate custm template. By default true"
+      "description": "Do not generate custm template. By default false"
     }
   },
   "required": [
-    "email"
   ]
 }
