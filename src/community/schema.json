@@ -20,37 +20,31 @@
     },
     "contributing": {
       "type": "boolean",
-      "$default": true,
       "alias": "c",
       "description": "Do generate contributing. By default true."
     },
     "codeOfConduct": {
       "type": "boolean",
-      "$default": true,
       "alias": "coc",
       "description": "Do generate code of conduct. By default true."
     },
     "pullRequest": {
       "type": "boolean",
-      "$default": true,
       "alias": "pr",
       "description": "Do generate pull request template. By default true"
     },
     "bugReport": {
       "type": "boolean",
-      "$default": true,
       "alias": "br",
       "description": "Do generate bug report template. By default true."
     },
     "featureRequest": {
       "type": "boolean",
-      "$default": true,
       "alias": "fr",
       "description": "Do generate feature request. By default true"
     },
     "custom": {
       "type": "boolean",
-      "$default": true,
       "alias": "cm",
       "description": "Do generate custm template. By default true"
     }

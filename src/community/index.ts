@@ -14,7 +14,7 @@ import {
   apply,
   mergeWith,
   template,
-  url,
+  url, filter, Tree, SchematicContext,
   //chain,
 } from '@angular-devkit/schematics';
 import {dasherize, classify, camelize} from '@angular-devkit/core/src/utils/strings';
@@ -35,17 +35,30 @@ export function community(options: Options): Rule {
   options.pullRequest = (options.pullRequest !== false) ? true : false;
   options.repositoryUrl = options.repositoryUrl || "";
   options.email = options.email || "";
-  /*return (tree: Tree, _context: SchematicContext): Rule => {
-    return tree;
-    // return chain[example({name: options.name})]
-  };*/
-  return mergeWith(apply(url('file://'+path.join(__dirname, `./files`)), [
-    template({
-      utils: strings,
-      ...stringUtils,
-      ...options,
-      'dot': '.',
-      //latestVersions,
-    }),
-  ]));
+  console.log(`Creating community files of ${JSON.stringify(options)}`);
+
+  return (tree: Tree, _context: SchematicContext): Rule | Tree => {
+    if (tree.exists('/CONTRIBUTING.md') && !options.contributing) tree.delete('/CONTRIBUTING.md');
+    if (tree.exists('/CODE_OF_CONDUCT.md') && !options.codeOfConduct) tree.delete('/CODE_OF_CONDUCT.md');
+    if (tree.exists('/PULL_REQUEST_TEMPLATE.md') && !options.pullRequest) tree.delete('/PULL_REQUEST_TEMPLATE.md');
+    if (tree.exists('/.github/bug_report.md') && !options.bugReport) tree.delete('/.github/bug_report.md');
+    if (tree.exists('/.github/custom.md') && !options.custom) tree.delete('/.github/custom.md');
+    if (tree.exists('/.github/feature_request.md') && !options.featureRequest) tree.delete('/.github/feature_request.md');
+
+    return mergeWith(apply(url('file://' + path.join(__dirname, `./files`)), [
+      filter(path => !(path.endsWith('CONTRIBUTING.md') && !options.contributing)),
+      filter(path => !(path.endsWith('CODE_OF_CONDUCT.md') && !options.codeOfConduct)),
+      filter(path => !(path.endsWith('PULL_REQUEST_TEMPLATE.md') && !options.pullRequest)),
+      filter(path => !(path.endsWith('bug_report.md') && !options.bugReport)),
+      filter(path => !(path.endsWith('custom.md') && !options.custom)),
+      filter(path => !(path.endsWith('feature_request.md') && !options.featureRequest)),
+      template({
+        utils: strings,
+        ...stringUtils,
+        ...options,
+        'dot': '.',
+        //latestVersions,
+      }),
+    ]));
+  }
 }
