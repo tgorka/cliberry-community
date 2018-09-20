@@ -19,6 +19,7 @@ import {
 } from '@angular-devkit/schematics';
 import {dasherize, classify, camelize} from '@angular-devkit/core/src/utils/strings';
 import {Schema as Options} from './schema';
+import * as path from "path";
 
 
 const stringUtils = {dasherize, classify, camelize};
@@ -38,7 +39,7 @@ export function community(options: Options): Rule {
     return tree;
     // return chain[example({name: options.name})]
   };*/
-  return mergeWith(apply(url('./files'), [
+  return mergeWith(apply(url('file://'+path.join(__dirname, `./files`)), [
     template({
       utils: strings,
       ...stringUtils,

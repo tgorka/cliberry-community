@@ -29,6 +29,9 @@ describe(schematicName, () => {
     expect(files.indexOf('/CODE_OF_CONDUCT.md')).toBeGreaterThanOrEqual(0);
     expect(files.indexOf('/CONTRIBUTING.md')).toBeGreaterThanOrEqual(0);
     expect(files.indexOf('/PULL_REQUEST_TEMPLATE.md')).toBeGreaterThanOrEqual(0);
+    expect(files.indexOf('/.github/bug_report.md')).toBeGreaterThanOrEqual(0);
+    expect(files.indexOf('/.github/custom.md')).toBeGreaterThanOrEqual(0);
+    expect(files.indexOf('/.github/feature_request.md')).toBeGreaterThanOrEqual(0);
   });
 
 });
