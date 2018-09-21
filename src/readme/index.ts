@@ -14,11 +14,12 @@ import {
   apply,
   mergeWith,
   template,
-  url,
+  url, filter,
   //chain,
 } from '@angular-devkit/schematics';
 import {dasherize, classify, camelize} from '@angular-devkit/core/src/utils/strings';
 import {Schema as Options} from './schema';
+import * as path from "path";
 
 
 const stringUtils = {dasherize, classify, camelize};
@@ -26,15 +27,14 @@ const stringUtils = {dasherize, classify, camelize};
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
 export function readme(options: Options): Rule {
-  /*return (tree: Tree, _context: SchematicContext): Rule => {
-    return tree;
-    // return chain[example({name: options.name})]
-  };*/
-  return mergeWith(apply(url('./files'), [
+  options.changelog = (options.changelog) ? true : false;
+  return mergeWith(apply(url('file://' + path.join(__dirname, `./files`)), [
+    filter(path => !(path.endsWith('CHANGELOG.md') && options.changelog)),
     template({
       utils: strings,
       ...stringUtils,
       ...options,
+      'date': new Date(),
       'dot': '.',
       //latestVersions,
     }),

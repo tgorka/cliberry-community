@@ -20,7 +20,7 @@ export interface Schema {
   /**
    * Do NOT generate changelog. By default false
    */
-  changelog: string;
+  changelog?: boolean;
   
   /**
    * Url of the repository. By default empty.
@@ -30,6 +30,6 @@ export interface Schema {
   /**
    * Name of the company/user for the repository/services. By default empty.
    */
-  company: string;
+  author: string;
   
 }

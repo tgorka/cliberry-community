@@ -19,10 +19,9 @@ describe(schematicName, () => {
   const schematicRunner = new SchematicTestRunner('schematics', collectionPath);
   const defaultOptions: Options = {
     name: 'test',
-    description: 'test',
-    changelog: 'test',
-    repositoryUrl: 'test',
-    company: 'test',
+    description: 'test description',
+    repositoryUrl: 'https://test.ltd',
+    author: 'company LTD',
   };
 
   it('should create all files of a project', () => {
@@ -30,7 +29,8 @@ describe(schematicName, () => {
 
     const tree = schematicRunner.runSchematic(schematicName, options);
     const files = tree.files;
-    expect(files.indexOf('/src/readme/.gitkeep')).toBeGreaterThanOrEqual(0);
+    expect(files.indexOf('/CHANGELOG.md')).toBeGreaterThanOrEqual(0);
+    expect(files.indexOf('/README.md')).toBeGreaterThanOrEqual(0);
   });
 
 });

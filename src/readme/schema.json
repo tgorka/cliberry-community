@@ -23,11 +23,7 @@
       "description": "Description of the project. Empty by default."
     },
     "changelog": {
-      "type": "string",
-      "$default": {
-        "$source": "argv",
-        "index": "2"
-      },
+      "type": "boolean",
       "alias": "c",
       "description": "Do NOT generate changelog. By default false"
     },
@@ -35,16 +31,16 @@
       "type": "string",
       "$default": {
         "$source": "argv",
-        "index": "3"
+        "index": "2"
       },
       "alias": "r",
       "description": "Url of the repository. By default empty."
     },
-    "company": {
+    "author": {
       "type": "string",
       "$default": {
         "$source": "argv",
-        "index": "4"
+        "index": "3"
       },
       "alias": "c",
       "description": "Name of the company/user for the repository/services. By default empty."
@@ -53,8 +49,7 @@
   "required": [
     "name",
     "description",
-    "changelog",
     "repositoryUrl",
-    "company"
+    "author"
   ]
 }
