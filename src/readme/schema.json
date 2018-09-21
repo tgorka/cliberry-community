@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "cliberry-schematics#readme",
+  "title": "cliberry-schematics readme Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": "0"
+      },
+      "alias": "n",
+      "description": "Name of the package/project"
+    },
+    "description": {
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": "1"
+      },
+      "alias": "d",
+      "description": "Description of the project. Empty by default."
+    },
+    "changelog": {
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": "2"
+      },
+      "alias": "c",
+      "description": "Do NOT generate changelog. By default false"
+    },
+    "repositoryUrl": {
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": "3"
+      },
+      "alias": "r",
+      "description": "Url of the repository. By default empty."
+    },
+    "company": {
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": "4"
+      },
+      "alias": "c",
+      "description": "Name of the company/user for the repository/services. By default empty."
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "changelog",
+    "repositoryUrl",
+    "company"
+  ]
+}

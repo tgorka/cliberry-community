@@ -1,0 +1,12 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "community": {
+      "factory": "./community/index#community",
+      "schema": "./community/schema.json",
+      "aliases": [
+        "c"
+      ]
+    }
+  }
+}

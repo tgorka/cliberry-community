@@ -1,0 +1,14 @@
+{
+  "version": "0.1.0",
+  "collections": {
+    "d": {
+      "init": {
+        "version": "0.0.1",
+        "parameters": {
+          "name": "cliberry-doc",
+          "description": "Collection of cliberry/schematics/angular cli for documentation generation."
+        }
+      }
+    }
+  }
+}

@@ -25,6 +25,14 @@
       "aliases": [
         "c"
       ]
+    },
+    "readme": {
+      "factory": "./readme/index#readme",
+      "schema": "./readme/schema.json",
+      "description": "Generate readme and the pages related to the documentation",
+      "aliases": [
+        "r"
+      ]
     }
   }
 }
