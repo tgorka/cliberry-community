@@ -13,8 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.2] - 2018-09-20
 ### Added
-- add community files generator
+- add community schematic
 - community files in the init
+- add readme schmatic
+- readme.md in readme schematic
+- changelog in readme schematic
 
 
 ## [0.0.1] - 2018-09-19
