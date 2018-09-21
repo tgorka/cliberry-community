@@ -47,9 +47,6 @@
     }
   },
   "required": [
-    "name",
-    "description",
-    "repositoryUrl",
-    "author"
+    "name"
   ]
 }

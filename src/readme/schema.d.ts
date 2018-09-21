@@ -15,7 +15,7 @@ export interface Schema {
   /**
    * Description of the project. Empty by default.
    */
-  description: string;
+  description?: string;
   
   /**
    * Do NOT generate changelog. By default false
@@ -25,11 +25,11 @@ export interface Schema {
   /**
    * Url of the repository. By default empty.
    */
-  repositoryUrl: string;
+  repositoryUrl?: string;
   
   /**
    * Name of the company/user for the repository/services. By default empty.
    */
-  author: string;
+  author?: string;
   
 }

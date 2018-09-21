@@ -28,6 +28,9 @@ const stringUtils = {dasherize, classify, camelize};
 // per file.
 export function readme(options: Options): Rule {
   options.changelog = (options.changelog) ? true : false;
+  options.author = options.author || '';
+  options.description = options.description || '';
+  options.repositoryUrl = options.repositoryUrl || '';
   return mergeWith(apply(url('file://' + path.join(__dirname, `./files`)), [
     filter(path => !(path.endsWith('CHANGELOG.md') && options.changelog)),
     template({
